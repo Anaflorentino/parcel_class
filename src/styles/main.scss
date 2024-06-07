@@ -1,15 +1,19 @@
 @use 'hero';
-@use './components/infos_bar';
+@use 'components/infos_bar';
+@use 'components/buttons';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    list-style: none;
     color: #fff;
+    text-decoration: none;
 }
 
 .container {
+    // border: 1px solid tomato;
     max-width: 960px;
     width: 100%;
     margin: 0 auto;

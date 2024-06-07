@@ -1,0 +1,27 @@
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap; // força o texto do elemento a não quebrar!
+
+    &--primary {
+        color: #fff;
+        background-color: #4f2ac3;        
+    }
+
+    // mobile
+    @media (max-width: 640px) {
+        display: block; //é o suficiente para fazer com o que um link <a> ocupe a linha toda
+        width: 100%; //utilizado para caso a gente utilize em outro elemento, como <button>
+    }
+
+    // tablet
+    @media screen and (min-width: 641px) and (max-width: 1024px) {
+        .button,
+        &--primary  {
+        display: flex;
+        align-items: center;
+    }   
+    }
+}
