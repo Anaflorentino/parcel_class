@@ -1,0 +1,56 @@
+
+.hero {
+    background-image: url('../images/fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover; //cobre todo o tamanho do container.
+
+    padding-top: 64px;
+    padding-bottom: 100px;
+    position: relative; //prende o elemento com position absolute dentro dele.
+
+    .container {
+        position: relative; //para o pseudo-elemento ficar APENAS em cima da imagem de fundo.
+    }
+
+    // Criando um pseudo-elemento de overlay para a imagem de fundo:
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        content: '';
+        opacity: .7;
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 42px;
+        line-height: 52px;
+        text-align: center;
+        font-weight: bold;
+       
+    }
+
+    &__logo {
+        margin: 0 auto;
+        height: 80px;
+        display: block; //para ativar o margin 0 auto!
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__logo {
+            height: 32px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    } 
+}
