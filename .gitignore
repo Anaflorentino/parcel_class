@@ -1,3 +1,4 @@
 .parcel-cache
 node_modules
-dist
+distparcel_class/
+parcel_class/
